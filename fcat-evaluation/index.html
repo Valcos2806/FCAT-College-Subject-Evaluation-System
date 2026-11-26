@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#143d35" />
+    <meta name="description" content="FCAT College Subject Evaluation System — gather thoughtful student feedback and turn it into meaningful improvements." />
+    <title>FCAT College | Subject Evaluation</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <symbol id="icon-book" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></symbol>
+      <symbol id="icon-chart" viewBox="0 0 24 24"><path d="M3 3v18h18M18 17V9M13 17V5M8 17v-5"/></symbol>
+      <symbol id="icon-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-8 9-4.5-1.5-8-4-8-9V5l8-3 8 3z"/><path d="m9 12 2 2 4-4"/></symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+      <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+      <symbol id="icon-message" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></symbol>
+      <symbol id="icon-star" viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2L5.8 21 7 14.2 2 9.3l6.9-1z"/></symbol>
+      <symbol id="icon-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 22h4M8.5 14.5A6 6 0 1 1 15.5 14.5c-.9.7-1.5 1.5-1.5 2.5h-4c0-1-.6-1.8-1.5-2.5z"/></symbol>
+      <symbol id="icon-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M5 21h14"/></symbol>
+      <symbol id="icon-sparkles" viewBox="0 0 24 24"><path d="m12 3-1.5 4.5L6 9l4.5 1.5L12 15l1.5-4.5L18 9l-4.5-1.5zM5 16l-.8 2.2L2 19l2.2.8L5 22l.8-2.2L8 19l-2.2-.8zM19 2l-.6 1.4L17 4l1.4.6L19 6l.6-1.4L21 4l-1.4-.6z"/></symbol>
+      <symbol id="icon-close" viewBox="0 0 24 24"><path d="m18 6-12 12M6 6l12 12"/></symbol>
+      <symbol id="icon-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 2-3 4M12 18h.01"/></symbol>
+      <symbol id="icon-cloud" viewBox="0 0 24 24"><path d="M17.5 19H6a4 4 0 0 1-.6-8A7 7 0 0 1 19 9.5 4.8 4.8 0 0 1 17.5 19z"/><path d="m9 14 2 2 4-4"/></symbol>
+      <symbol id="icon-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+      <symbol id="icon-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></symbol>
+      <symbol id="icon-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+      <symbol id="icon-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></symbol>
+      <symbol id="icon-filter" viewBox="0 0 24 24"><path d="M4 5h16M7 12h10M10 19h4"/></symbol>
+      <symbol id="icon-refresh" viewBox="0 0 24 24"><path d="M20 7v5h-5M4 17v-5h5"/><path d="M6.1 8a7 7 0 0 1 11.6-2L20 8M4 16l2.3 2a7 7 0 0 0 11.6-2"/></symbol>
+      <symbol id="icon-quote" viewBox="0 0 24 24"><path d="M3 21c3 0 7-1 7-8V5H4v8h3c0 3-1 5-4 6zM14 21c3 0 7-1 7-8V5h-6v8h3c0 3-1 5-4 6z"/></symbol>
+      <symbol id="icon-clipboard" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="18" rx="2"/><path d="M9 4V2h6v2M9 10h6M9 14h6M9 18h4"/></symbol>
+      <symbol id="icon-lock" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3"/></symbol>
+    </svg>
+
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="#evaluation" data-view-link="evaluation" aria-label="FCAT College Subject Evaluation home">
+          <span class="brand-mark"><svg class="icon"><use href="#icon-book"></use></svg></span>
+          <span class="brand-copy"><strong>FCAT <span>College</span></strong><small>Subject Evaluation</small></span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <button class="nav-link active" type="button" data-view="evaluation"><svg class="icon"><use href="#icon-clipboard"></use></svg><span>Evaluate</span></button>
+          <button class="nav-link" type="button" data-view="dashboard"><svg class="icon"><use href="#icon-chart"></use></svg><span>Dashboard</span></button>
+        </nav>
+
+        <div class="header-actions">
+          <span class="term-badge"><span class="status-dot"></span>2nd Semester · AY 2026–2027</span>
+          <button class="icon-button" id="helpButton" type="button" aria-label="How this evaluation works"><svg class="icon"><use href="#icon-help"></use></svg></button>
+          <span class="avatar" aria-label="FCAT College">FC</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="view" id="evaluationView" aria-labelledby="evaluationTitle">
+        <div class="page-heading">
+          <div class="heading-copy">
+            <div class="eyebrow"><span></span>Student voice matters</div>
+            <h1 id="evaluationTitle">Help shape a better<br /><em>learning experience.</em></h1>
+            <p>Your honest feedback helps FCAT College strengthen teaching, subjects, and student support. It takes about 3 minutes.</p>
+          </div>
+          <div class="privacy-pill"><svg class="icon"><use href="#icon-shield"></use></svg><span><strong>Confidential by default</strong><small>No student name is collected</small></span></div>
+        </div>
+
+        <div class="evaluation-layout">
+          <aside class="progress-card" aria-label="Evaluation progress">
+            <div class="progress-ring" id="progressRing"><div><strong id="progressPercent">0%</strong><span>complete</span></div></div>
+            <h2>Your evaluation</h2>
+            <p class="progress-intro">A few thoughtful answers can make a real difference.</p>
+            <ol class="step-list">
+              <li class="step active" data-step="details"><span class="step-number">1</span><div><strong>Class details</strong><small>Subject & instructor</small></div><svg class="icon step-check"><use href="#icon-check"></use></svg></li>
+              <li class="step" data-step="ratings"><span class="step-number">2</span><div><strong>Teaching experience</strong><small>8 quick ratings</small></div><svg class="icon step-check"><use href="#icon-check"></use></svg></li>
+              <li class="step" data-step="feedback"><span class="step-number">3</span><div><strong>Thoughts & suggestions</strong><small>Your ideas matter</small></div><svg class="icon step-check"><use href="#icon-check"></use></svg></li>
+            </ol>
+            <div class="autosave-note"><svg class="icon"><use href="#icon-cloud"></use></svg><span><strong>Draft saves automatically</strong><small id="saveStatus">Ready when you are</small></span></div>
+          </aside>
+
+          <form class="evaluation-form" id="evaluationForm" novalidate>
+            <section class="form-card" data-section="details">
+              <header class="section-header">
+                <span class="section-icon"><svg class="icon"><use href="#icon-book"></use></svg></span>
+                <div><span class="section-kicker">Section 01</span><h2>Class details</h2><p>Tell us which class you are evaluating.</p></div>
+              </header>
+
+              <div class="field-grid">
+                <label class="field"><span>Academic program <b>*</b></span><select name="program" required><option value="">Select your program</option><option>BS Information Technology</option><option>BS Computer Science</option><option>BS Information Systems</option><option>BS Computer Engineering</option><option>Associate in Computer Technology</option></select><small class="field-error">Please select your program.</small></label>
+                <label class="field"><span>Year level <b>*</b></span><select name="year" required><option value="">Select year level</option><option>1st Year</option><option>2nd Year</option><option>3rd Year</option><option>4th Year</option></select><small class="field-error">Please select your year level.</small></label>
+                <label class="field"><span>Subject <b>*</b></span><select name="subject" required><option value="">Select a subject</option><option>Introduction to Computing</option><option>Data Structures and Algorithms</option><option>Database Management Systems</option><option>Web Systems and Technologies</option><option>Computer Networks</option><option>Software Engineering</option><option>Ethics in Computing</option><option>Capstone Project</option></select><small class="field-error">Please select a subject.</small></label>
+                <label class="field"><span>Instructor <b>*</b></span><select name="instructor" required><option value="">Select an instructor</option><option>Prof. Maria Santos</option><option>Prof. Juan Dela Cruz</option><option>Prof. Andrea Reyes</option><option>Prof. Paolo Mendoza</option><option>Prof. Angela Garcia</option><option>Prof. Miguel Torres</option></select><small class="field-error">Please select an instructor.</small></label>
+                <label class="field"><span>Section <b>*</b></span><input name="section" type="text" maxlength="20" placeholder="e.g. BSIT-2A" required /><small class="field-error">Please enter your section.</small></label>
+                <label class="field"><span>Semester <b>*</b></span><select name="semester" required><option>1st Semester</option><option selected>2nd Semester</option><option>Summer</option></select><small class="field-error">Please select a semester.</small></label>
+              </div>
+
+              <div class="anonymous-note"><span class="anonymous-icon"><svg class="icon"><use href="#icon-shield"></use></svg></span><div><strong>Anonymous evaluation</strong><p>Your name is never collected. Please avoid including identifying details in your comments.</p></div><span class="secure-badge">Private</span></div>
+            </section>
+
+            <section class="form-card" data-section="ratings">
+              <header class="section-header">
+                <span class="section-icon"><svg class="icon"><use href="#icon-star"></use></svg></span>
+                <div><span class="section-kicker">Section 02</span><h2>Teaching experience</h2><p>Rate each statement based on your experience in this class.</p></div>
+              </header>
+              <div class="scale-guide"><span><b>1</b> Strongly disagree</span><span><b>2</b> Disagree</span><span><b>3</b> Neutral</span><span><b>4</b> Agree</span><span><b>5</b> Strongly agree</span></div>
+              <div class="rating-list" id="ratingList" role="group" aria-label="Teaching experience ratings"></div>
+              <p class="required-note"><span>*</span> All ratings are required.</p>
+            </section>
+
+            <section class="form-card" data-section="feedback">
+              <header class="section-header">
+                <span class="section-icon warm"><svg class="icon"><use href="#icon-message"></use></svg></span>
+                <div><span class="section-kicker">Section 03</span><h2>Thoughts & suggestions</h2><p>The most useful improvements often begin with your ideas.</p></div>
+              </header>
+
+              <div class="feedback-prompt positive-prompt">
+                <span class="prompt-label"><svg class="icon"><use href="#icon-heart"></use></svg>What worked well?</span>
+                <label class="textarea-label" for="positiveFeedback">Which teaching methods, activities, or materials helped you learn?</label>
+                <textarea id="positiveFeedback" name="positive" maxlength="600" rows="4" placeholder="Share what you found most helpful in this subject..."></textarea>
+                <div class="field-footer"><span>Optional, but appreciated</span><span class="char-count" data-for="positiveFeedback">0 / 600</span></div>
+              </div>
+
+              <div class="feedback-prompt improvement-prompt">
+                <span class="prompt-label"><svg class="icon"><use href="#icon-bulb"></use></svg>What could be improved?</span>
+                <label class="textarea-label" for="improvementFeedback">What should the instructor or college consider changing?</label>
+                <textarea id="improvementFeedback" name="improvement" maxlength="600" rows="5" placeholder="For example: more practical activities, clearer deadlines, additional learning resources..."></textarea>
+                <div class="field-footer"><span>Specific, constructive suggestions are most useful</span><span class="char-count" data-for="improvementFeedback">0 / 600</span></div>
+              </div>
+
+              <div class="suggestion-box">
+                <span class="suggestion-title">Need a starting point? Add a suggestion:</span>
+                <div class="suggestion-chips">
+                  <button type="button" class="suggestion-chip" data-suggestion="More hands-on activities and real-world examples would help.">+ More hands-on activities</button>
+                  <button type="button" class="suggestion-chip" data-suggestion="Clearer instructions and expectations for activities would help.">+ Clearer instructions</button>
+                  <button type="button" class="suggestion-chip" data-suggestion="Additional learning resources and practice materials would help.">+ More learning resources</button>
+                  <button type="button" class="suggestion-chip" data-suggestion="A slower pace with more time for questions would help.">+ Better pacing</button>
+                </div>
+              </div>
+
+              <div class="recommendation-block">
+                <label>Would you recommend this subject and instructor to other students? <b>*</b></label>
+                <div class="segmented-control" id="recommendationControl" role="group" aria-label="Recommendation">
+                  <button type="button" data-value="Yes"><svg class="icon"><use href="#icon-heart"></use></svg>Yes, definitely</button>
+                  <button type="button" data-value="Maybe"><svg class="icon"><use href="#icon-help"></use></svg>Maybe</button>
+                  <button type="button" data-value="No"><svg class="icon"><use href="#icon-close"></use></svg>Not yet</button>
+                </div>
+                <small class="field-error recommendation-error">Please choose a recommendation.</small>
+              </div>
+            </section>
+
+            <div class="submit-panel">
+              <div class="submit-privacy"><svg class="icon"><use href="#icon-lock"></use></svg><span><strong>Your feedback is confidential.</strong><small>Reviewed only by authorized FCAT personnel.</small></span></div>
+              <button class="primary-button" type="submit" id="submitButton">Submit evaluation<svg class="icon"><use href="#icon-arrow"></use></svg></button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="view" id="dashboardView" aria-labelledby="dashboardTitle" hidden>
+        <div class="page-heading dashboard-heading">
+          <div class="heading-copy">
+            <div class="eyebrow"><span></span>Feedback overview</div>
+            <h1 id="dashboardTitle">Small signals.<br /><em>Meaningful improvements.</em></h1>
+            <p>Explore student feedback and spot opportunities to make learning clearer, more engaging, and more supportive.</p>
+          </div>
+          <button class="secondary-button" type="button" id="exportButton"><svg class="icon"><use href="#icon-download"></use></svg>Export CSV</button>
+        </div>
+
+        <div class="local-data-note"><svg class="icon"><use href="#icon-cloud"></use></svg><span><strong>Local prototype</strong> · Responses are saved in this browser. Sample responses are included to demonstrate the dashboard.</span></div>
+
+        <section class="dashboard-filters" aria-label="Dashboard filters">
+          <div class="filter-title"><svg class="icon"><use href="#icon-filter"></use></svg><span>Filter feedback</span></div>
+          <label class="filter-field"><span>Subject</span><select id="filterSubject"><option value="">All subjects</option></select></label>
+          <label class="filter-field"><span>Instructor</span><select id="filterInstructor"><option value="">All instructors</option></select></label>
+          <label class="filter-field"><span>Program</span><select id="filterProgram"><option value="">All programs</option></select></label>
+          <label class="filter-field"><span>Semester</span><select id="filterSemester"><option value="">All semesters</option></select></label>
+          <button class="reset-button" id="resetFilters" type="button"><svg class="icon"><use href="#icon-refresh"></use></svg>Reset</button>
+        </section>
+
+        <div class="stats-grid">
+          <article class="stat-card"><div class="stat-top"><span class="stat-icon"><svg class="icon"><use href="#icon-message"></use></svg></span><span class="stat-label">Total responses</span></div><strong id="totalResponses">0</strong><small id="responseSubtext">Student evaluations</small></article>
+          <article class="stat-card featured"><div class="stat-top"><span class="stat-icon"><svg class="icon"><use href="#icon-star"></use></svg></span><span class="stat-label">Average rating</span></div><strong><span id="averageRating">0.0</span><span class="stat-unit">/ 5</span></strong><small id="ratingSubtext">Across all criteria</small></article>
+          <article class="stat-card"><div class="stat-top"><span class="stat-icon"><svg class="icon"><use href="#icon-heart"></use></svg></span><span class="stat-label">Recommendation rate</span></div><strong><span id="recommendationRate">0</span><span class="stat-unit">%</span></strong><small>Students who said yes</small></article>
+          <article class="stat-card"><div class="stat-top"><span class="stat-icon"><svg class="icon"><use href="#icon-bulb"></use></svg></span><span class="stat-label">Improvement ideas</span></div><strong id="improvementCount">0</strong><small>Constructive suggestions shared</small></article>
+        </div>
+
+        <div class="insights-layout">
+          <section class="chart-card">
+            <header class="card-header"><div><span class="section-kicker">Teaching experience</span><h2>Rating by criterion</h2></div><span class="chart-legend"><span></span>Average rating</span></header>
+            <div class="criteria-chart" id="criteriaChart"></div>
+            <div class="chart-scale"><span>1 · Strongly disagree</span><span>5 · Strongly agree</span></div>
+          </section>
+
+          <aside class="spotlight-card">
+            <header class="card-header"><div><span class="section-kicker">Feedback spotlight</span><h2>What students are saying</h2></div><span class="spotlight-icon"><svg class="icon"><use href="#icon-sparkles"></use></svg></span></header>
+            <div id="spotlightContent" class="spotlight-content"></div>
+          </aside>
+        </div>
+
+        <section class="responses-card">
+          <header class="card-header"><div><span class="section-kicker">Student voice</span><h2>Recent thoughts & suggestions</h2></div><span class="response-count" id="filteredCount">0 responses</span></header>
+          <div class="responses-list" id="responsesList"></div>
+        </section>
+
+        <div class="empty-state" id="dashboardEmpty" hidden>
+          <span class="empty-icon"><svg class="icon"><use href="#icon-message"></use></svg></span>
+          <h2>No matching feedback yet</h2>
+          <p>Try changing the filters, or submit the first evaluation for this class.</p>
+          <button class="primary-button" type="button" data-view="evaluation">Start an evaluation<svg class="icon"><use href="#icon-arrow"></use></svg></button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer"><div><span class="footer-brand">FCAT College</span><span>Subject Evaluation System</span></div><span>Thoughtful feedback. Better learning.</span></footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"><svg class="icon"><use href="#icon-check"></use></svg><span id="toastMessage"></span></div>
+
+    <div class="modal-backdrop" id="helpModal" hidden>
+      <section class="modal" role="dialog" aria-modal="true" aria-labelledby="helpTitle">
+        <button class="modal-close icon-button" type="button" data-close-modal aria-label="Close help"><svg class="icon"><use href="#icon-close"></use></svg></button>
+        <span class="modal-icon"><svg class="icon"><use href="#icon-help"></use></svg></span>
+        <span class="section-kicker">A quick guide</span>
+        <h2 id="helpTitle">How your evaluation works</h2>
+        <div class="help-steps"><div><span>1</span><p><strong>Choose your class.</strong><br />Select the program, subject, and instructor you are evaluating.</p></div><div><span>2</span><p><strong>Rate your experience.</strong><br />Answer eight statements using the 1–5 rating scale.</p></div><div><span>3</span><p><strong>Share your ideas.</strong><br />Tell us what worked and what FCAT can improve.</p></div></div>
+        <div class="modal-privacy"><svg class="icon"><use href="#icon-shield"></use></svg><p>This prototype stores responses only in your current browser. No personal information is collected.</p></div>
+        <button class="primary-button full-width" type="button" data-close-modal>Got it<svg class="icon"><use href="#icon-check"></use></svg></button>
+      </section>
+    </div>
+
+    <div class="modal-backdrop" id="successModal" hidden>
+      <section class="modal success-modal" role="dialog" aria-modal="true" aria-labelledby="successTitle">
+        <span class="success-check"><svg class="icon"><use href="#icon-check"></use></svg></span>
+        <span class="section-kicker">Feedback received</span>
+        <h2 id="successTitle">Thank you for speaking up.</h2>
+        <p>Your evaluation has been saved. Every thoughtful response helps FCAT College create a better learning experience.</p>
+        <div class="success-summary"><svg class="icon"><use href="#icon-shield"></use></svg><span>Submitted anonymously · Saved on this device</span></div>
+        <button class="primary-button full-width" type="button" id="viewDashboardButton">View feedback dashboard<svg class="icon"><use href="#icon-arrow"></use></svg></button>
+        <button class="text-button" type="button" id="anotherEvaluationButton">Submit another evaluation</button>
+      </section>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
